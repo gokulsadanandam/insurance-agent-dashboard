@@ -1,5 +1,5 @@
 import { Policy } from '../+state/reducer';
-import { BACKEND_URL, GET_POLICY_DETAIL_API , GET_USER_POLICY_DETAIL_API, UPDATE_USER_POLICY_DETAIL_API} from '../config';
+import { BACKEND_URL, GET_POLICIES_SOLD_PER_REGION_PER_MONTH, GET_POLICY_DETAIL_API , GET_POLICY_SALES_API, GET_TOTAL_CUSTOMERS_PER_REGION_API, GET_USER_POLICY_DETAIL_API, UPDATE_USER_POLICY_DETAIL_API} from '../config';
 
 export const getMessage = async () => {
   const response = await fetch(BACKEND_URL);
@@ -60,4 +60,55 @@ export const updatePolicyInDb = async(policy: Policy) => {
   }else{
     return Promise.reject('Failed to get message from backend');
   }
+}
+
+export  const getTotalPoliciesSoldPerMonth = async() => {
+  const response = await fetch(BACKEND_URL + GET_POLICY_SALES_API);
+
+  if(response.status === 404) {
+    return Promise.reject('No Records Found in Database for the Query.')
+  }
+
+  const data = await response.json();
+
+  if (data) {
+    return data;
+  }
+
+  return Promise.reject('Failed to get message from backend');
+
+}
+
+export  const getTotalCustomersPerRegion = async() => {
+  const response = await fetch(BACKEND_URL + GET_TOTAL_CUSTOMERS_PER_REGION_API);
+
+  if(response.status === 404) {
+    return Promise.reject('No Records Found in Database for the Query.')
+  }
+
+  const data = await response.json();
+
+  if (data) {
+    return data;
+  }
+
+  return Promise.reject('Failed to get message from backend');
+
+}
+
+export  const getPoliciesSoldPerRegionPerMonth = async(region: string) => {
+  const response = await fetch(BACKEND_URL + GET_POLICIES_SOLD_PER_REGION_PER_MONTH + '?region=' + region);
+
+  if(response.status === 404) {
+    return Promise.reject('No Records Found in Database for the Query.')
+  }
+
+  const data = await response.json();
+
+  if (data) {
+    return data;
+  }
+
+  return Promise.reject('Failed to get message from backend');
+
 }

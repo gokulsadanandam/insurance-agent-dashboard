@@ -6,3 +6,4 @@ export * from './Protected';
 export * from './PrivateRoute';
 export * from './EditPolicy';
 export * from './Notifications';
+export * from './Analytics';

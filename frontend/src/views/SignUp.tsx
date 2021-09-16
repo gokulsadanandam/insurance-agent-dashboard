@@ -14,6 +14,10 @@ const useStyles = makeStyles((theme) => ({
   },
   padding: {
     padding: theme.spacing(1),
+    display: 'flex',
+    justifyContent: 'center',
+    width: 400,
+    margin: '8rem auto'
   },
   button: {
     textTransform: 'none',

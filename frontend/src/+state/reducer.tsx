@@ -40,7 +40,7 @@
   
   export const initialState: appState = {
     header : {
-      text: 'Agent Login'
+      text: 'User Agent Login'
     },
     selectedPolicyForEdit: undefined,
     error: undefined,

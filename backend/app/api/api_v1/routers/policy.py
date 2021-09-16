@@ -23,7 +23,7 @@ async def policy_list(
     skip: int = 0, 
     limit: int = 10,
     db=Depends(get_db),
-    # current_user=Depends(get_current_active_superuser),
+    current_user=Depends(get_current_active_user),
 ):
     """
     Get all Policies
@@ -42,7 +42,7 @@ async def find_policy_by_id(
     response: Response,
     policy_id:int,
     db=Depends(get_db),
-    # current_user=Depends(get_current_active_superuser),
+    current_user=Depends(get_current_active_user),
 ):
     """
     Find Policy By Id
@@ -62,7 +62,7 @@ async def edit_policy_by_id(
     policy_id:int,
     policy:PolicyEdit,
     db=Depends(get_db),
-    # current_user=Depends(get_current_active_superuser),
+    current_user=Depends(get_current_active_user),
 ):
     """
     Edit Policy By Id

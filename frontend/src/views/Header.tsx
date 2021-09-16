@@ -9,6 +9,7 @@ import MenuIcon from '@material-ui/icons/Menu';
 import HomeIcon from '@material-ui/icons/Home';
 import { isAuthenticated } from '../utils/auth';
 import { useHistory } from 'react-router';
+import { useStoreContext } from '../+state/context';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -25,18 +26,22 @@ const useStyles = makeStyles((theme) => ({
 export const Header: FC = () => {
   const classes = useStyles();
   const history = useHistory();
+  const { state, dispatch } = useStoreContext();
 
   return (
     <div className={classes.root}>
-      <AppBar position="static">
+      <AppBar position="sticky">
         <Toolbar>
-          <IconButton  onClick={ () => history.push('/') } edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
+          <IconButton onClick={() => {
+            dispatch({ type: 'update/header', payload: 'User Agent Login' })
+            history.push('/')
+          }} edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
             <HomeIcon />
           </IconButton>
           <Typography variant="h6" className={classes.title}>
-             Agent Login
+            {state.header.text}
           </Typography>
-          {isAuthenticated() && <Button color="inherit">Logout</Button>  }
+          {isAuthenticated() && <Button color="inherit">Logout</Button>}
         </Toolbar>
       </AppBar>
     </div>

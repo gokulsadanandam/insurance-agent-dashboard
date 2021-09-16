@@ -25,7 +25,7 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: 'column',
     alignItems: 'center',
     height: '48vh',
-    width:'48vh',
+    width: '48vh',
     justifyContent: 'center',
     fontSize: 'calc(10px + 2vmin)',
     margin: '64px auto',
@@ -53,7 +53,7 @@ export const Login: FC = () => {
       const data = await login(email, password);
 
       if (data) {
-        dispatch({ type : 'update/header', payload : 'User Agent Dashboard' })
+        dispatch({ type: 'update/header', payload: 'User Agent Dashboard' })
         history.push('/');
       }
     } catch (err) {
@@ -70,7 +70,7 @@ export const Login: FC = () => {
   return isAuthenticated() ? (
     <Redirect to="/" />
   ) : (
-    <Paper  className={classes.content}>
+    <Paper className={classes.content}>
       <div className={classes.margin}>
         <Grid container spacing={8} alignItems="flex-end">
           <Grid item>
@@ -142,7 +142,10 @@ export const Login: FC = () => {
             variant="outlined"
             color="primary"
             className={classes.button}
-            onClick={() => history.push('/signup')}
+            onClick={() => {
+              dispatch({ type: 'update/header', payload: 'User Agent Signup' })
+              history.push('/signup')
+            }}
           >
             Sign Up
           </Button>{' '}

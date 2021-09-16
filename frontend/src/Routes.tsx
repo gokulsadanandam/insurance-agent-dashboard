@@ -3,7 +3,7 @@ import { Switch, Route } from 'react-router-dom';
 import { useHistory } from 'react-router';
 import { makeStyles } from '@material-ui/core/styles';
 import {Box} from '@material-ui/core';
-import { Home, Login, SignUp, Protected, PrivateRoute, Header, EditPolicy, AppMessages } from './views';
+import { Home, Login, SignUp, Protected, Analytics, Header, EditPolicy, AppMessages, PrivateRoute } from './views';
 import { Admin } from './admin';
 import { logout } from './utils/auth';
 import LinearProgress from '@material-ui/core/LinearProgress';
@@ -50,11 +50,9 @@ export const Routes: FC = () => {
                 return null;
               }}
             />
-            {/* <PrivateRoute path="/protected" component={Protected} /> */}
-            {/* <PrivateRoute path="/" component={Home} /> */}
-            {/* <PrivateRoute path="/policy/edit" component={EditPolicy} /> */}
-            <Route exact path="/" component={Home} />
-            <Route exact path="/policy/edit" component={EditPolicy} />
+            <PrivateRoute  path="/" component={Home} />
+            <PrivateRoute  path="/policy/edit" component={EditPolicy} />
+            <PrivateRoute  path="/analytics" component={Analytics} />
       </Switch>
     </Box>
   );

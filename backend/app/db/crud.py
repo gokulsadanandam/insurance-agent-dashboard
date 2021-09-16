@@ -4,7 +4,7 @@ import typing as t
 from pprint import pprint
 from . import models, schemas
 from app.core.security import get_password_hash
-
+import time,datetime
 
 def get_user(db: Session, user_id: int):
     user = db.query(models.User).filter(models.User.id == user_id).first()
@@ -112,4 +112,50 @@ def get_customer_policies(db: Session, customer_id: int)-> t.List[schemas.Custom
 def get_policies_sold_per_month(db: Session):
     query = "SELECT count(*), date_trunc('month', to_timestamp(date_of_purchase)) FROM policies GROUP BY date_trunc('month', to_timestamp(date_of_purchase));"
     result = db.execute(query)
-    return result
+
+    d, a = {}, []
+    for rowproxy in result:
+        for column, value in rowproxy.items():
+            if (isinstance(value, datetime.date)):
+                d = {**d, **{'month': int(time.mktime(value.timetuple()))}}
+            else:
+                d = {**d, **{column: value}}
+        a.append(d)
+    return a
+
+def get_total_customer_per_region(db: Session):
+    query = "select customer_region,count(*) from customers group by customers.customer_region;"
+    result = db.execute(query)
+
+    d, a = {}, []
+    for rowproxy in result:
+        for column, value in rowproxy.items():
+            d = {**d, **{column: value}}
+        a.append(d)
+    return a
+
+def get_policies_sold_per_region(db: Session,region:str):
+    query = '''select customers.customer_id,customers.customer_region,policies.policy_id, date_trunc('month', to_timestamp(policies.date_of_purchase)) 
+                    from customers 
+                    inner join policies
+                    on customers.customer_id = policies.customer_id
+                    where customers.customer_region = '{region}' '''.format(region=region)
+    result = db.execute(query)
+
+    d, a = {}, []
+    for rowproxy in result:
+        for column, value in rowproxy.items():
+            if (isinstance(value, datetime.date)):
+                d = {**d, **{'month': int(time.mktime(value.timetuple()))}}
+            else:
+                d = {**d, **{column: value}}
+        a.append(d)
+    counterMap = {}
+    for values in a:
+        if 'month' in values and values['month'] in counterMap:
+            counterMap[values['month']] = counterMap[values['month']] + 1
+        else:
+            if 'month' in values:
+                counterMap[values['month']] = 1
+
+    return counterMap

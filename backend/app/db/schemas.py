@@ -93,5 +93,14 @@ class CustomerOut(CustomerBase):
 
 class Analytics(BaseModel):
     count: int
-    date_trun: str
+    month: int
 
+class CustomerRegionAnalytics(BaseModel):
+    customer_region: str
+    count: int
+
+# class CustomerPoliciesByRegionAnalytics(BaseModel):
+    # customer_region: str
+    # customer_id: int
+    # month: int
+    # policy_id: int
