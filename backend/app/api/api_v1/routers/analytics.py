@@ -22,7 +22,7 @@ analytics_router = r = APIRouter()
 async def policy_sold_per_month(
     response: Response,
     db=Depends(get_db),
-    current_user=Depends(get_current_active_user),
+    # current_user=Depends(get_current_active_user),
 ):
     """
     Get Policies Sold Per Month
@@ -40,7 +40,7 @@ async def policy_sold_per_month(
 async def total_customers_per_region(
     response: Response,
     db=Depends(get_db),
-    current_user=Depends(get_current_active_user),
+    # current_user=Depends(get_current_active_user),
 ):
     """
     Get Customer Per Region
@@ -60,7 +60,7 @@ async def total_policies_sold_per_region_per_month(
     response: Response,
     region:str,
     db=Depends(get_db),
-    current_user=Depends(get_current_active_user),
+    # current_user=Depends(get_current_active_user),
 ):
     """
     Get Policies Sold Per Region Per Month

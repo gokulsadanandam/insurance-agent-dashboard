@@ -57,7 +57,9 @@ export const Home: FC = () => {
         break;
     }
     }catch(err){
-      return dispatch({ "type" : "app/notification" , payload : err })
+      if(typeof(err) === "string")
+        return dispatch({ "type" : "app/notification" , payload : err })
+      return dispatch({ "type" : "app/notification" , payload : "Error Occured!" })
       // dispatch({ type : 'update/error' , payload :  err });
     }
 

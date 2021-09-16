@@ -22,7 +22,7 @@ async def customers_list(
     skip: int = 0, 
     limit: int = 10,
     db=Depends(get_db),
-    current_user=Depends(get_current_active_user),
+    # current_user=Depends(get_current_active_user),
 ):
     """
     Get all Customers List
@@ -41,7 +41,7 @@ async def find_customerpolicy_by_id(
     response: Response,
     customer_id:int,
     db=Depends(get_db),
-    current_user=Depends(get_current_active_user),
+    # current_user=Depends(get_current_active_user),
 ):
     """
     Find Customer's Policy

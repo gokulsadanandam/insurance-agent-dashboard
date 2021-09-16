@@ -1,0 +1,717 @@
+customer_id,customer_gender,customer_income_group,customer_region,customer_marital_status
+400,M,0- $25K,North,unmarried
+401,M,$25-$70K,South,married
+402,M,>$70K,East,unmarried
+403,M,$25-$70K,West,married
+404,M,$25-$70K,North,married
+405,M,$25-$70K,North,unmarried
+406,M,$25-$70K,North,unmarried
+407,M,$25-$70K,North,unmarried
+408,M,$25-$70K,North,married
+409,M,$25-$70K,North,unmarried
+410,M,$25-$70K,North,married
+411,M,$25-$70K,North,unmarried
+412,M,$25-$70K,North,unmarried
+413,M,$25-$70K,North,unmarried
+414,M,$25-$70K,North,married
+415,M,$25-$70K,North,unmarried
+416,M,$25-$70K,North,married
+417,M,$25-$70K,North,unmarried
+418,M,$25-$70K,North,unmarried
+419,M,$25-$70K,North,unmarried
+420,M,$25-$70K,North,unmarried
+420,M,$25-$70K,North,married
+755,M,$25-$70K,North,unmarried
+756,M,$25-$70K,North,married
+757,M,$25-$70K,North,unmarried
+758,M,$25-$70K,North,unmarried
+759,M,$25-$70K,North,unmarried
+760,M,$25-$70K,North,married
+761,M,$25-$70K,North,unmarried
+762,M,$25-$70K,North,unmarried
+763,M,$25-$70K,South,married
+764,M,$25-$70K,South,unmarried
+765,M,$25-$70K,South,unmarried
+766,M,$25-$70K,South,unmarried
+767,M,$25-$70K,South,married
+768,M,$25-$70K,South,married
+769,M,$25-$70K,South,married
+770,M,$25-$70K,South,unmarried
+771,M,$25-$70K,South,unmarried
+772,M,$25-$70K,South,married
+773,M,$25-$70K,South,unmarried
+774,M,$25-$70K,South,married
+775,M,$25-$70K,South,married
+776,M,$25-$70K,South,unmarried
+777,M,$25-$70K,South,unmarried
+778,M,$25-$70K,South,unmarried
+779,M,$25-$70K,South,married
+780,M,$25-$70K,South,unmarried
+781,M,$25-$70K,South,married
+782,M,$25-$70K,South,unmarried
+783,M,$25-$70K,South,unmarried
+784,M,$25-$70K,South,unmarried
+785,M,$25-$70K,South,married
+786,M,$25-$70K,South,married
+787,M,$25-$70K,South,unmarried
+788,M,$25-$70K,South,unmarried
+789,M,$25-$70K,South,unmarried
+790,M,$25-$70K,South,unmarried
+791,M,$25-$70K,South,married
+792,M,$25-$70K,South,married
+793,M,$25-$70K,South,married
+794,M,$25-$70K,South,married
+795,M,$25-$70K,South,married
+796,M,$25-$70K,South,married
+797,M,$25-$70K,South,married
+798,M,$25-$70K,South,unmarried
+799,M,$25-$70K,South,married
+800,M,$25-$70K,South,unmarried
+801,M,$25-$70K,South,married
+802,M,$25-$70K,South,married
+803,M,$25-$70K,South,unmarried
+804,M,$25-$70K,South,unmarried
+805,M,$25-$70K,South,married
+806,M,$25-$70K,South,unmarried
+807,M,$25-$70K,South,unmarried
+808,M,$25-$70K,South,unmarried
+809,M,$25-$70K,South,unmarried
+810,M,$25-$70K,South,married
+811,M,$25-$70K,South,unmarried
+812,M,$25-$70K,South,married
+813,M,$25-$70K,South,married
+814,M,$25-$70K,South,unmarried
+815,M,$25-$70K,South,unmarried
+816,M,$25-$70K,South,married
+817,M,$25-$70K,South,unmarried
+818,M,$25-$70K,South,unmarried
+819,M,$25-$70K,South,married
+820,M,$25-$70K,South,unmarried
+821,M,$25-$70K,South,unmarried
+822,M,$25-$70K,South,married
+823,M,$25-$70K,South,married
+824,M,$25-$70K,South,unmarried
+825,M,$25-$70K,South,unmarried
+826,M,$25-$70K,South,unmarried
+827,M,$25-$70K,South,unmarried
+828,M,$25-$70K,South,unmarried
+829,M,$25-$70K,South,unmarried
+830,M,$25-$70K,South,married
+831,M,$25-$70K,South,married
+832,M,$25-$70K,South,unmarried
+833,M,$25-$70K,South,unmarried
+834,M,$25-$70K,South,married
+835,M,$25-$70K,South,unmarried
+836,M,$25-$70K,South,unmarried
+837,M,$25-$70K,South,unmarried
+838,M,$25-$70K,South,unmarried
+839,M,$25-$70K,South,married
+840,M,$25-$70K,South,unmarried
+840,M,$25-$70K,South,married
+840,M,>$70K,South,married
+840,M,>$70K,South,unmarried
+995,M,>$70K,South,unmarried
+996,M,>$70K,South,married
+997,M,>$70K,South,married
+998,M,>$70K,South,unmarried
+999,M,>$70K,South,unmarried
+1000,M,>$70K,South,married
+1001,M,>$70K,South,married
+1002,M,>$70K,South,married
+1003,M,>$70K,South,married
+1004,M,>$70K,South,unmarried
+1005,M,>$70K,South,unmarried
+1006,M,>$70K,South,unmarried
+1007,M,>$70K,South,married
+1008,M,>$70K,South,unmarried
+1009,M,>$70K,South,married
+1010,M,>$70K,South,married
+1011,M,>$70K,South,married
+1012,M,>$70K,South,married
+1013,M,>$70K,South,unmarried
+1014,M,>$70K,South,unmarried
+1015,M,>$70K,South,unmarried
+1016,M,>$70K,South,married
+1017,M,>$70K,South,married
+1018,M,>$70K,South,married
+1019,M,>$70K,South,married
+1020,M,>$70K,South,unmarried
+1021,M,>$70K,South,married
+1022,M,>$70K,South,unmarried
+1023,M,>$70K,South,unmarried
+1024,M,>$70K,South,married
+1025,M,>$70K,South,unmarried
+1026,M,>$70K,South,married
+1027,M,>$70K,South,unmarried
+1028,M,>$70K,South,married
+1029,M,>$70K,South,married
+1030,M,>$70K,South,married
+1031,M,>$70K,South,unmarried
+1032,M,>$70K,South,unmarried
+1033,M,>$70K,South,unmarried
+1034,M,>$70K,South,unmarried
+1035,M,>$70K,South,unmarried
+1036,M,>$70K,South,married
+1037,M,>$70K,South,married
+1038,M,>$70K,South,unmarried
+1039,M,>$70K,South,married
+1040,M,>$70K,South,married
+1041,M,>$70K,South,married
+1042,M,>$70K,South,unmarried
+1043,M,$25-$70K,South,married
+1044,M,$25-$70K,South,unmarried
+1045,M,$25-$70K,South,unmarried
+1046,M,$25-$70K,South,married
+1047,M,$25-$70K,South,married
+1048,M,$25-$70K,South,married
+1049,M,$25-$70K,South,unmarried
+1050,M,$25-$70K,South,unmarried
+1051,M,$25-$70K,South,unmarried
+1052,M,$25-$70K,South,married
+1053,M,$25-$70K,South,unmarried
+1054,M,$25-$70K,South,married
+1055,M,$25-$70K,South,married
+1056,M,$25-$70K,South,married
+1057,M,$25-$70K,South,unmarried
+1058,M,$25-$70K,South,married
+1059,M,$25-$70K,South,unmarried
+1060,M,$25-$70K,South,married
+1061,M,$25-$70K,South,married
+1062,M,$25-$70K,South,unmarried
+1063,M,$25-$70K,South,married
+1064,M,$25-$70K,South,married
+1065,M,$25-$70K,South,unmarried
+1066,M,$25-$70K,South,unmarried
+1067,M,$25-$70K,South,unmarried
+1068,M,$25-$70K,South,unmarried
+1069,M,$25-$70K,South,unmarried
+1070,M,$25-$70K,South,unmarried
+1071,M,$25-$70K,South,unmarried
+1072,M,$25-$70K,South,unmarried
+1073,M,$25-$70K,South,unmarried
+1074,M,$25-$70K,South,married
+1075,M,$25-$70K,South,married
+1076,M,$25-$70K,South,married
+1077,M,$25-$70K,South,married
+1078,M,$25-$70K,South,unmarried
+1079,M,$25-$70K,South,married
+1080,M,$25-$70K,South,unmarried
+1081,M,$25-$70K,South,married
+1082,M,$25-$70K,South,unmarried
+1083,M,$25-$70K,South,unmarried
+1084,M,$25-$70K,South,unmarried
+1085,M,$25-$70K,South,unmarried
+1086,M,$25-$70K,South,unmarried
+1087,M,$25-$70K,South,unmarried
+1088,M,$25-$70K,South,unmarried
+1089,M,$25-$70K,South,married
+1090,M,$25-$70K,South,unmarried
+1091,M,$25-$70K,South,unmarried
+1092,M,$25-$70K,South,unmarried
+1093,M,$25-$70K,South,married
+1094,M,$25-$70K,South,married
+1095,M,$25-$70K,South,unmarried
+1096,M,$25-$70K,South,married
+1097,M,$25-$70K,South,married
+1098,M,$25-$70K,South,unmarried
+1099,M,$25-$70K,South,married
+1100,M,$25-$70K,South,married
+1101,M,$25-$70K,South,unmarried
+1102,M,$25-$70K,South,unmarried
+1103,M,$25-$70K,South,married
+1104,M,$25-$70K,South,unmarried
+1105,M,$25-$70K,South,unmarried
+1106,M,$25-$70K,South,unmarried
+1107,M,$25-$70K,South,married
+1108,M,$25-$70K,South,married
+1109,M,$25-$70K,South,married
+1110,M,$25-$70K,South,unmarried
+1111,M,$25-$70K,South,unmarried
+1112,M,$25-$70K,South,married
+1113,M,$25-$70K,South,unmarried
+1114,M,$25-$70K,South,unmarried
+1115,M,$25-$70K,South,married
+1116,M,$25-$70K,South,married
+1117,M,$25-$70K,South,unmarried
+1118,M,$25-$70K,South,unmarried
+1119,M,$25-$70K,South,unmarried
+1120,M,$25-$70K,South,unmarried
+1121,M,$25-$70K,South,unmarried
+1122,M,$25-$70K,South,married
+1123,M,$25-$70K,South,unmarried
+1124,M,$25-$70K,South,unmarried
+1125,M,$25-$70K,South,unmarried
+1126,M,$25-$70K,South,married
+1127,M,$25-$70K,South,married
+1128,M,$25-$70K,East,unmarried
+1129,M,$25-$70K,East,unmarried
+1130,M,$25-$70K,East,unmarried
+1131,M,$25-$70K,East,married
+1132,M,$25-$70K,East,unmarried
+1133,M,$25-$70K,East,married
+1134,M,$25-$70K,East,unmarried
+1135,M,$25-$70K,East,married
+1136,M,$25-$70K,East,married
+1137,M,$25-$70K,East,married
+1138,M,$25-$70K,East,married
+1139,M,$25-$70K,East,unmarried
+1140,M,$25-$70K,East,married
+1141,M,$25-$70K,East,married
+1142,M,$25-$70K,East,married
+1143,M,$25-$70K,East,married
+1144,M,$25-$70K,East,unmarried
+1145,M,$25-$70K,East,married
+1146,M,$25-$70K,East,married
+1147,M,$25-$70K,East,unmarried
+1148,M,$25-$70K,East,married
+1149,M,$25-$70K,East,married
+1150,M,$25-$70K,East,unmarried
+1151,M,$25-$70K,East,married
+1152,M,$25-$70K,East,married
+1153,M,$25-$70K,East,unmarried
+1154,M,$25-$70K,East,unmarried
+1155,M,$25-$70K,East,unmarried
+1156,M,$25-$70K,East,married
+1157,M,$25-$70K,East,married
+1158,M,$25-$70K,East,married
+1159,M,$25-$70K,East,unmarried
+1160,M,$25-$70K,East,married
+1161,M,$25-$70K,East,unmarried
+1162,M,$25-$70K,East,married
+1163,M,$25-$70K,East,married
+1164,M,$25-$70K,East,unmarried
+1165,M,$25-$70K,East,married
+1166,M,$25-$70K,East,married
+1167,M,0- $25K,East,unmarried
+1168,M,0- $25K,East,unmarried
+1169,M,0- $25K,East,married
+1170,M,0- $25K,East,married
+1171,M,0- $25K,East,married
+1172,M,0- $25K,East,unmarried
+1173,M,0- $25K,East,married
+1174,M,0- $25K,East,married
+1175,M,0- $25K,East,unmarried
+1176,M,0- $25K,East,unmarried
+1177,M,0- $25K,East,unmarried
+1178,M,0- $25K,East,married
+1179,M,0- $25K,East,married
+1180,M,0- $25K,East,unmarried
+1181,M,0- $25K,East,married
+1182,M,0- $25K,East,married
+1183,M,0- $25K,East,unmarried
+1184,M,0- $25K,East,married
+1185,M,0- $25K,East,unmarried
+1186,M,0- $25K,East,married
+1187,M,0- $25K,East,married
+1188,M,0- $25K,East,married
+1189,M,0- $25K,East,unmarried
+1190,M,0- $25K,East,unmarried
+1191,M,0- $25K,East,married
+1192,M,0- $25K,East,married
+1193,M,0- $25K,East,unmarried
+1194,M,0- $25K,East,unmarried
+1195,M,0- $25K,East,unmarried
+1196,M,0- $25K,East,married
+1197,M,0- $25K,East,married
+1198,M,0- $25K,East,unmarried
+1199,M,0- $25K,East,unmarried
+1200,M,0- $25K,East,unmarried
+1201,M,0- $25K,East,married
+1202,M,0- $25K,East,unmarried
+1203,M,0- $25K,East,unmarried
+1204,M,0- $25K,East,unmarried
+1205,M,0- $25K,East,married
+1206,M,0- $25K,East,unmarried
+1207,M,0- $25K,East,unmarried
+1208,M,0- $25K,East,married
+1209,M,0- $25K,East,unmarried
+1210,M,0- $25K,East,married
+1211,M,0- $25K,East,married
+1212,M,0- $25K,East,married
+1213,M,0- $25K,East,unmarried
+1214,M,0- $25K,East,married
+1215,M,0- $25K,East,married
+1216,M,0- $25K,East,married
+1217,M,0- $25K,East,unmarried
+1218,M,0- $25K,East,unmarried
+1219,M,0- $25K,East,married
+1220,M,0- $25K,East,unmarried
+1221,M,0- $25K,East,unmarried
+1222,M,0- $25K,East,married
+1223,M,0- $25K,East,unmarried
+1224,M,0- $25K,East,married
+1225,M,0- $25K,East,married
+1226,M,0- $25K,East,unmarried
+1227,M,0- $25K,East,married
+1228,M,0- $25K,East,unmarried
+1229,M,0- $25K,East,unmarried
+1230,M,0- $25K,East,unmarried
+1231,M,0- $25K,East,married
+1232,M,0- $25K,East,unmarried
+1233,M,0- $25K,East,unmarried
+1234,M,0- $25K,East,married
+1235,M,0- $25K,East,married
+1236,M,0- $25K,East,married
+1237,M,0- $25K,East,married
+1238,M,0- $25K,East,married
+1239,M,0- $25K,East,unmarried
+1240,M,0- $25K,East,unmarried
+1241,M,0- $25K,East,married
+1242,M,0- $25K,East,married
+1243,M,0- $25K,East,unmarried
+1244,M,0- $25K,East,unmarried
+1245,M,0- $25K,East,married
+1246,M,0- $25K,East,married
+1247,M,0- $25K,East,married
+1248,M,0- $25K,East,married
+1249,M,0- $25K,East,unmarried
+1250,M,0- $25K,East,married
+1251,M,0- $25K,East,married
+1252,M,0- $25K,East,married
+1253,M,0- $25K,East,unmarried
+1254,M,0- $25K,East,unmarried
+1255,M,0- $25K,East,unmarried
+1256,M,0- $25K,East,married
+1257,M,0- $25K,East,married
+1258,M,0- $25K,East,unmarried
+1259,M,0- $25K,East,married
+1260,M,0- $25K,East,married
+1261,M,0- $25K,East,unmarried
+1262,M,0- $25K,East,married
+1263,M,0- $25K,East,married
+1264,M,0- $25K,East,married
+1265,M,0- $25K,East,unmarried
+1266,M,0- $25K,East,married
+1267,M,0- $25K,East,married
+1268,M,0- $25K,East,married
+1269,M,0- $25K,East,unmarried
+1270,M,0- $25K,East,unmarried
+1271,M,0- $25K,East,married
+1272,M,0- $25K,East,unmarried
+1273,M,0- $25K,East,married
+1274,M,0- $25K,East,unmarried
+1275,M,0- $25K,East,married
+1276,M,0- $25K,East,married
+1277,M,0- $25K,East,married
+1278,M,0- $25K,East,married
+1279,M,0- $25K,East,unmarried
+1280,M,0- $25K,East,married
+1281,M,0- $25K,East,married
+1282,M,0- $25K,East,unmarried
+1283,M,0- $25K,East,married
+1284,M,0- $25K,East,unmarried
+1285,M,0- $25K,East,married
+1286,M,0- $25K,East,unmarried
+1287,M,0- $25K,East,married
+1288,M,0- $25K,East,unmarried
+1289,M,0- $25K,East,married
+1290,M,0- $25K,East,married
+1291,M,0- $25K,East,married
+1292,M,0- $25K,East,married
+1293,M,0- $25K,East,married
+1294,M,0- $25K,East,unmarried
+1295,M,0- $25K,East,married
+1296,M,0- $25K,East,married
+1297,M,0- $25K,East,unmarried
+1298,M,0- $25K,East,unmarried
+1299,M,0- $25K,East,unmarried
+1300,M,0- $25K,East,married
+1301,M,0- $25K,East,unmarried
+1302,M,0- $25K,East,unmarried
+1303,M,0- $25K,East,unmarried
+1304,M,0- $25K,East,unmarried
+1305,M,0- $25K,East,married
+1306,M,0- $25K,East,married
+1307,F,0- $25K,East,unmarried
+1308,F,0- $25K,East,married
+1309,F,0- $25K,East,married
+1310,F,0- $25K,East,married
+1311,F,0- $25K,East,unmarried
+1312,F,0- $25K,East,married
+1313,F,0- $25K,East,unmarried
+1314,F,0- $25K,East,married
+1315,F,0- $25K,East,unmarried
+1316,F,0- $25K,East,married
+1317,F,0- $25K,East,unmarried
+1318,F,0- $25K,East,married
+1319,F,0- $25K,East,unmarried
+1320,F,0- $25K,East,unmarried
+1321,F,0- $25K,East,unmarried
+1322,F,0- $25K,East,unmarried
+1323,F,0- $25K,East,unmarried
+1324,F,0- $25K,East,married
+1325,F,0- $25K,East,unmarried
+1326,F,0- $25K,East,unmarried
+1327,F,0- $25K,East,married
+1328,F,0- $25K,East,married
+1329,F,0- $25K,East,married
+1330,F,0- $25K,East,unmarried
+1331,F,0- $25K,East,married
+1332,F,0- $25K,East,unmarried
+1333,F,0- $25K,East,unmarried
+1334,F,0- $25K,East,married
+1335,F,0- $25K,East,married
+1336,F,0- $25K,East,married
+1337,F,0- $25K,East,unmarried
+1338,F,0- $25K,East,unmarried
+1339,F,0- $25K,East,married
+1340,F,0- $25K,East,married
+1341,F,0- $25K,East,married
+1342,F,0- $25K,East,unmarried
+1343,F,0- $25K,East,unmarried
+1344,F,0- $25K,East,married
+1345,F,0- $25K,East,married
+1346,F,0- $25K,East,unmarried
+1347,F,0- $25K,East,unmarried
+1348,F,0- $25K,East,unmarried
+1349,F,0- $25K,East,married
+1350,F,0- $25K,East,married
+1351,F,0- $25K,East,married
+1352,F,0- $25K,East,unmarried
+1353,F,0- $25K,East,married
+1354,F,0- $25K,East,unmarried
+1355,F,0- $25K,East,married
+1356,F,0- $25K,East,married
+1357,F,0- $25K,East,unmarried
+1358,F,0- $25K,East,married
+1359,F,0- $25K,East,married
+1360,F,0- $25K,East,unmarried
+1361,F,0- $25K,East,unmarried
+1362,F,0- $25K,East,unmarried
+1363,F,0- $25K,East,married
+1364,F,0- $25K,East,unmarried
+1365,F,0- $25K,East,married
+1366,F,0- $25K,East,married
+1367,F,0- $25K,East,married
+1368,F,0- $25K,East,unmarried
+1369,F,0- $25K,East,unmarried
+1370,F,0- $25K,East,married
+1371,F,0- $25K,East,unmarried
+1372,F,0- $25K,East,married
+1373,F,0- $25K,East,married
+1374,F,0- $25K,East,unmarried
+1375,F,0- $25K,East,married
+1376,F,0- $25K,East,married
+1377,F,0- $25K,East,married
+1378,F,0- $25K,East,unmarried
+1379,F,0- $25K,East,unmarried
+1380,F,0- $25K,East,married
+1381,F,0- $25K,East,married
+1382,F,0- $25K,East,married
+1383,F,0- $25K,East,married
+1384,F,0- $25K,East,married
+1385,F,0- $25K,East,married
+1386,F,0- $25K,East,unmarried
+1387,F,0- $25K,East,unmarried
+1388,F,0- $25K,East,unmarried
+1389,F,0- $25K,East,unmarried
+1390,F,0- $25K,East,unmarried
+1391,F,0- $25K,East,unmarried
+1392,F,0- $25K,East,unmarried
+1393,F,0- $25K,East,married
+1394,F,0- $25K,East,unmarried
+1395,F,0- $25K,East,unmarried
+1396,F,0- $25K,East,married
+1397,F,0- $25K,East,unmarried
+1398,F,0- $25K,East,married
+1399,F,0- $25K,East,unmarried
+1400,F,0- $25K,East,married
+1401,F,0- $25K,East,married
+1402,F,0- $25K,East,unmarried
+1403,F,0- $25K,East,married
+1404,F,0- $25K,East,unmarried
+1405,F,0- $25K,East,married
+1406,F,0- $25K,East,unmarried
+1407,F,0- $25K,East,unmarried
+1408,F,0- $25K,East,married
+1409,F,0- $25K,East,unmarried
+1410,F,0- $25K,East,married
+1411,F,0- $25K,East,unmarried
+1412,F,0- $25K,East,married
+1413,F,0- $25K,East,married
+1414,F,0- $25K,East,married
+1415,F,0- $25K,East,married
+1416,F,0- $25K,East,unmarried
+1417,F,0- $25K,East,unmarried
+1418,F,0- $25K,East,married
+1419,F,0- $25K,East,unmarried
+1420,F,0- $25K,East,married
+1421,F,0- $25K,East,unmarried
+1422,F,0- $25K,East,unmarried
+1423,F,0- $25K,East,unmarried
+1424,F,0- $25K,East,unmarried
+1425,F,0- $25K,East,married
+1426,F,0- $25K,East,married
+1427,F,0- $25K,East,unmarried
+1428,F,0- $25K,East,unmarried
+1429,F,0- $25K,East,married
+1430,F,0- $25K,East,married
+1431,F,0- $25K,East,unmarried
+1432,F,0- $25K,East,unmarried
+1433,F,0- $25K,West,unmarried
+1434,F,0- $25K,West,unmarried
+1435,F,0- $25K,West,married
+1436,F,0- $25K,West,married
+1437,F,0- $25K,West,married
+1438,F,0- $25K,West,unmarried
+1439,F,0- $25K,West,unmarried
+1440,F,0- $25K,West,married
+1441,F,0- $25K,West,unmarried
+1442,F,0- $25K,West,unmarried
+1443,F,0- $25K,West,unmarried
+1444,F,0- $25K,West,unmarried
+1445,F,0- $25K,West,unmarried
+1446,F,0- $25K,West,unmarried
+1447,F,0- $25K,West,unmarried
+1448,F,0- $25K,West,unmarried
+1449,F,0- $25K,West,married
+1450,F,0- $25K,West,unmarried
+1451,F,0- $25K,West,unmarried
+1452,F,0- $25K,West,married
+1453,F,0- $25K,West,married
+1454,F,0- $25K,West,married
+1455,F,0- $25K,West,unmarried
+1456,F,0- $25K,West,married
+1457,F,0- $25K,West,married
+1458,F,0- $25K,West,married
+1459,F,0- $25K,West,married
+1460,F,0- $25K,West,unmarried
+1461,F,0- $25K,West,unmarried
+1462,F,0- $25K,West,unmarried
+1463,F,0- $25K,West,unmarried
+1464,F,0- $25K,West,unmarried
+1465,F,0- $25K,West,married
+1466,F,0- $25K,West,married
+1467,F,0- $25K,West,married
+1468,F,0- $25K,West,married
+1469,F,0- $25K,West,unmarried
+1470,F,0- $25K,West,married
+1471,F,0- $25K,West,unmarried
+1472,F,0- $25K,West,married
+1473,F,0- $25K,West,married
+1474,F,0- $25K,West,unmarried
+1475,F,0- $25K,West,unmarried
+1476,F,0- $25K,West,unmarried
+1477,F,0- $25K,West,unmarried
+1478,F,0- $25K,West,unmarried
+1479,F,0- $25K,West,married
+1480,F,0- $25K,West,married
+1481,F,0- $25K,West,unmarried
+1482,F,0- $25K,West,married
+1483,F,0- $25K,West,unmarried
+1484,F,0- $25K,West,married
+1485,F,0- $25K,West,unmarried
+1486,F,0- $25K,West,married
+1487,F,0- $25K,West,unmarried
+1488,F,0- $25K,West,married
+1489,F,0- $25K,West,married
+1490,F,0- $25K,West,married
+1491,F,0- $25K,West,married
+1492,F,0- $25K,West,unmarried
+1493,F,0- $25K,West,married
+1494,F,0- $25K,West,unmarried
+1495,F,0- $25K,West,unmarried
+1496,F,0- $25K,West,married
+1497,F,0- $25K,West,unmarried
+1498,F,0- $25K,West,unmarried
+1499,F,0- $25K,West,unmarried
+1500,F,0- $25K,West,married
+1501,F,0- $25K,West,married
+1502,F,0- $25K,West,married
+1503,F,0- $25K,West,unmarried
+1504,F,0- $25K,West,married
+1505,F,0- $25K,West,married
+1506,F,0- $25K,West,unmarried
+1507,F,0- $25K,West,unmarried
+1508,F,0- $25K,West,married
+1509,F,0- $25K,West,married
+1510,F,0- $25K,West,married
+1511,F,0- $25K,West,married
+1512,F,0- $25K,West,married
+1513,F,0- $25K,West,married
+1514,F,0- $25K,West,married
+1515,F,0- $25K,West,unmarried
+1516,F,0- $25K,West,unmarried
+1517,F,0- $25K,West,unmarried
+1518,F,0- $25K,West,unmarried
+1519,F,0- $25K,West,married
+1520,F,0- $25K,West,married
+1521,F,0- $25K,West,married
+1522,F,0- $25K,West,married
+1523,F,0- $25K,West,married
+1524,F,0- $25K,West,married
+1525,F,0- $25K,West,married
+1526,F,0- $25K,West,unmarried
+1527,F,0- $25K,West,unmarried
+1528,F,0- $25K,West,married
+1529,F,0- $25K,West,married
+1530,F,0- $25K,West,married
+1531,F,0- $25K,West,married
+1532,F,0- $25K,West,unmarried
+1533,F,0- $25K,West,married
+1534,F,0- $25K,West,unmarried
+1535,F,0- $25K,West,unmarried
+1536,F,0- $25K,West,unmarried
+1537,F,0- $25K,West,married
+1538,F,0- $25K,West,married
+1539,F,0- $25K,West,married
+1540,F,0- $25K,West,married
+1541,F,0- $25K,West,unmarried
+1542,F,0- $25K,West,married
+1543,F,0- $25K,West,unmarried
+1544,F,0- $25K,West,unmarried
+1545,F,0- $25K,West,unmarried
+1546,F,0- $25K,West,unmarried
+1547,F,0- $25K,West,unmarried
+1548,F,0- $25K,West,unmarried
+1549,F,0- $25K,West,unmarried
+1550,F,0- $25K,West,unmarried
+1551,F,0- $25K,West,unmarried
+1552,F,0- $25K,West,unmarried
+1553,F,0- $25K,West,married
+1554,F,0- $25K,West,married
+1555,F,0- $25K,West,married
+1556,F,0- $25K,West,married
+1557,F,0- $25K,West,unmarried
+1558,F,0- $25K,West,married
+1559,F,0- $25K,West,married
+1560,F,0- $25K,West,unmarried
+1561,F,0- $25K,West,unmarried
+1562,F,0- $25K,West,unmarried
+1563,F,0- $25K,West,married
+1564,F,0- $25K,West,married
+1565,F,0- $25K,West,married
+1566,F,0- $25K,West,married
+1567,F,0- $25K,West,unmarried
+1568,F,0- $25K,West,married
+1569,F,0- $25K,West,unmarried
+1570,F,0- $25K,West,unmarried
+1571,F,0- $25K,West,married
+1572,F,0- $25K,West,unmarried
+1573,F,0- $25K,West,unmarried
+1574,F,0- $25K,West,unmarried
+1575,F,0- $25K,West,unmarried
+1576,F,0- $25K,West,married
+1577,F,0- $25K,West,married
+1578,F,0- $25K,West,married
+1579,F,0- $25K,West,married
+1580,F,0- $25K,West,married
+1581,F,0- $25K,West,unmarried
+1582,F,0- $25K,West,unmarried
+1583,F,0- $25K,West,unmarried
+1584,F,0- $25K,West,married
+1585,F,0- $25K,West,married
+1586,F,0- $25K,West,unmarried
+1587,F,0- $25K,West,married
+1588,F,0- $25K,West,unmarried
+1589,F,0- $25K,West,married
+1590,F,0- $25K,West,married
+1591,F,0- $25K,West,unmarried
+1592,F,0- $25K,West,unmarried
+1593,F,0- $25K,West,married
+1594,F,0- $25K,West,married
+1595,F,0- $25K,West,unmarried
+1596,F,0- $25K,West,unmarried
+1597,F,0- $25K,West,unmarried
+1598,F,0- $25K,West,married
+1599,F,0- $25K,West,unmarried
