@@ -14,6 +14,7 @@ import { Redirect } from 'react-router-dom';
 import { useHistory } from 'react-router';
 
 import { login, isAuthenticated } from '../utils/auth';
+import { useStoreContext } from '../+state/context';
 
 const useStyles = makeStyles((theme) => ({
   margin: {
@@ -44,6 +45,7 @@ export const Login: FC = () => {
   const [email, setEmail] = useState<string>('');
   const [password, setPassword] = useState<string>('');
   const [error, setError] = useState<string>('');
+  const { state, dispatch } = useStoreContext();
 
   const handleSubmit = async (_: React.MouseEvent) => {
     setError('');
@@ -51,6 +53,7 @@ export const Login: FC = () => {
       const data = await login(email, password);
 
       if (data) {
+        dispatch({ type : 'update/header', payload : 'User Agent Dashboard' })
         history.push('/');
       }
     } catch (err) {

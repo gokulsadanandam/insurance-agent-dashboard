@@ -6,6 +6,8 @@ import { isAuthenticated } from '../utils/auth';
 import { Box, TextField, Typography, MenuItem, FormControl,InputLabel, Select, Button } from '@material-ui/core';
 import { reducer, initialState } from '../+state/reducer';
 import Table from './Table';
+import Collapse from '@material-ui/core/Collapse';
+import Fade from '@material-ui/core/Fade';
 
 const useStyles = makeStyles((theme) => ({
   link: {
@@ -28,6 +30,8 @@ export const Home: FC = () => {
   
   const { query } = state;
 
+  const { endOfRecords } = query;
+
   const dispatchQueryAction =  (value: any,type: string) => dispatch({ type : 'query/update' , payload :  { [type] :  value } })
 
   const fetchResults = async () => {
@@ -45,13 +49,23 @@ export const Home: FC = () => {
       default:
         results = await getUserPoliciesDetail(value);
         dispatch({ type : 'query/results' , payload : results })
+        if(results.length === 0){
+          dispatch({ type : 'query/update' , payload :  { endOfRecords: true } });
+        }
         break;
     }
   }
 
+  const loadMoreData = async () => {
+    dispatch({ type : 'query/update' , payload :  { skip : state.query.skip + 25 } });
+    await fetchResults();
+  }
+
   return (
     <Box width="100%" textAlign="center" mt={3}>
-      <Typography variant="h3" color="primary" gutterBottom >Search For Policy Details using Customer or Policy Id</Typography>
+      <Collapse in={query.results.length === 0}>
+        <Typography variant="h3" color="textSecondary" gutterBottom >Search For Policy Details using Customer or Policy Id</Typography>
+      </Collapse>
       <Box display="flex"  alignItems="center" justifyContent="center" mx="auto" mt={3} >
       <FormControl className={classes.formControl} variant="outlined">
         <InputLabel>Query Type</InputLabel>
@@ -76,7 +90,7 @@ export const Home: FC = () => {
         </Button>
       </Box>
       <Box width="75%" mx="auto" mt={3}>
-      <Table  rows={query.results} />
+      <Table  rows={query.results} onLoadMore={loadMoreData} endOfRecords={endOfRecords} />
       </Box>
     {/* { !isAuthenticated() && <Redirect to="/login" /> } */}
     </Box>
