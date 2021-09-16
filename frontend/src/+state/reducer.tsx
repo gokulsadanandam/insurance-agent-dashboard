@@ -21,6 +21,7 @@
     header : {
       text: string;
     },
+    error?: string;
     query: {
       value: string;
       type: string;
@@ -29,25 +30,23 @@
       endOfRecords:boolean;
       results: object[];
     },
-    selectedPolicyForEdit?: Policy
+    selectedPolicyForEdit?: Policy,
+    loader:boolean;
+    notifications : {
+      message?: string,
+      open: boolean
+    }
   }
   
   export const initialState: appState = {
     header : {
       text: 'Agent Login'
     },
-    selectedPolicyForEdit: {
-      "policy_id": 12345,
-      "customer_id": 400,
-      "fuel": "CNG",
-      "vehicle_segment": "A",
-      "premium": 958,
-      "bodily_injury_liability": false,
-      "personal_injury_protection": false,
-      "property_damage_liability": false,
-      "collision": true,
-      "comprehensive": true,
-      "date_of_purchase": 1516060800
+    selectedPolicyForEdit: undefined,
+    error: undefined,
+    loader:false,
+    notifications: {
+      open: false
     },
     query: {
       value : '',
@@ -63,7 +62,6 @@
     state: any,
     action: { type: string; payload?: any }
   ) {
-    console.log(state)
     switch (action.type) {
       case 'update/header':
         return{
@@ -72,17 +70,42 @@
             text : action.payload
           }
         }
+      case 'update/selectedPolicy':
+        return{
+          ...state,
+          selectedPolicyForEdit : {
+            ...(state.selectedPolicyForEdit || {}),
+            ...action.payload
+          }
+        }
       case "query/update":
         return {
           ...state,
+          error: undefined,
           query : {
             ...state.query,
             ...action.payload
           }
         }
+        case "app/notification":
+          return {
+            ...state,
+            notifications: {
+              open: true,
+              message: action.payload
+            }
+          }
+        case "app/closeNotificationMessage": 
+          return {
+            ...state,
+            notifications: {
+              open: false
+            }
+          }
         case "query/results":
         return {
           ...state,
+          error: undefined,
           query : {
             ...state.query,
             results : action.payload
@@ -100,6 +123,19 @@
               ...state,
               loader: action.payload
             }
+          case "update/error":
+            return{
+              ...state,
+              error : action.payload,
+              query: {
+                ...state.query,
+                results: []
+              }
+            }
+         case "app/resetState":
+           return {
+             ...initialState
+           }
       default:
         // throw new Error();
     }

@@ -3,9 +3,11 @@ import { Switch, Route } from 'react-router-dom';
 import { useHistory } from 'react-router';
 import { makeStyles } from '@material-ui/core/styles';
 import {Box} from '@material-ui/core';
-import { Home, Login, SignUp, Protected, PrivateRoute, Header, EditPolicy } from './views';
+import { Home, Login, SignUp, Protected, PrivateRoute, Header, EditPolicy, AppMessages } from './views';
 import { Admin } from './admin';
 import { logout } from './utils/auth';
+import LinearProgress from '@material-ui/core/LinearProgress';
+import { useStoreContext } from './+state/context';
 
 const useStyles = makeStyles((theme) => ({
   app: {
@@ -27,9 +29,13 @@ export const Routes: FC = () => {
   const classes = useStyles();
   const history = useHistory();
 
+  const {state} = useStoreContext();
+
   return (
     <Box  className={classes.app} >
     <Header/>
+    <AppMessages/>
+   { state.loader && <LinearProgress color="secondary"  />}
       <Switch>
         <Route path="/admin">
           <Admin />

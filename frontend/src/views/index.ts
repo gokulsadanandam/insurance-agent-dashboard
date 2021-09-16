@@ -5,3 +5,4 @@ export * from './SignUp';
 export * from './Protected';
 export * from './PrivateRoute';
 export * from './EditPolicy';
+export * from './Notifications';

@@ -8,6 +8,7 @@ import { reducer, initialState } from '../+state/reducer';
 import Table from './Table';
 import Collapse from '@material-ui/core/Collapse';
 import Fade from '@material-ui/core/Fade';
+import { useStoreContext } from '../+state/context';
 
 const useStyles = makeStyles((theme) => ({
   link: {
@@ -25,25 +26,26 @@ const useStyles = makeStyles((theme) => ({
 
 export const Home: FC = () => {
   
-  const [state, dispatch] = useReducer(reducer, initialState);
+  const {state, dispatch} = useStoreContext();
   const classes = useStyles();
   
-  const { query } = state;
+  const { query, error } = state;
 
   const { endOfRecords } = query;
 
   const dispatchQueryAction =  (value: any,type: string) => dispatch({ type : 'query/update' , payload :  { [type] :  value } })
+  console.log(state)
 
   const fetchResults = async () => {
     const { value , type } = query;
     let results;
 
-    if(!(value&&type)){ alert('Error') }
-
+    if(!value||!type){ return dispatch({ "type" : "app/notification" , payload : "Both Fields are Required!" })}
+    try{
     switch(type){
       case 'policy':
         results = await getPolicyDetail(value);
-        console.log(results)
+        dispatch({ type : 'query/update' , payload :  { endOfRecords: true } });
         dispatch({ type : 'query/results' , payload : [results] })
         break;
       default:
@@ -54,6 +56,11 @@ export const Home: FC = () => {
         }
         break;
     }
+    }catch(err){
+      return dispatch({ "type" : "app/notification" , payload : err })
+      // dispatch({ type : 'update/error' , payload :  err });
+    }
+
   }
 
   const loadMoreData = async () => {
@@ -64,7 +71,7 @@ export const Home: FC = () => {
   return (
     <Box width="100%" textAlign="center" mt={3}>
       <Collapse in={query.results.length === 0}>
-        <Typography variant="h3" color="textSecondary" gutterBottom >Search For Policy Details using Customer or Policy Id</Typography>
+        <Typography variant="h4" color="textSecondary" gutterBottom >Search For Policy Details using Customer or Policy Id</Typography>
       </Collapse>
       <Box display="flex"  alignItems="center" justifyContent="center" mx="auto" mt={3} >
       <FormControl className={classes.formControl} variant="outlined">
@@ -90,6 +97,7 @@ export const Home: FC = () => {
         </Button>
       </Box>
       <Box width="75%" mx="auto" mt={3}>
+        {error}
       <Table  rows={query.results} onLoadMore={loadMoreData} endOfRecords={endOfRecords} />
       </Box>
     {/* { !isAuthenticated() && <Redirect to="/login" /> } */}

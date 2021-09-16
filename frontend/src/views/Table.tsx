@@ -20,6 +20,8 @@ import LastPageIcon from '@material-ui/icons/LastPage';
 import EditIcon from '@material-ui/icons/Edit';
 import VisibilityIcon from '@material-ui/icons/Visibility';
 import VisibilityOffIcon from '@material-ui/icons/VisibilityOff';
+import CancelIcon  from '@material-ui/icons/Cancel';
+import BeenhereIcon  from '@material-ui/icons/Beenhere';
 import { useStoreContext } from "../+state/context";
 import { useHistory } from 'react-router';
 import { Box, Button } from '@material-ui/core';
@@ -129,7 +131,7 @@ const CollapsibleTableRow = (props: { row: any }) => {
         <StyledTableCell component="th" scope="row">
           {row.policy_id}
         </StyledTableCell>
-        <StyledTableCell align="right">{row.date_of_purchase}</StyledTableCell>
+        <StyledTableCell align="right">{new Date(row.date_of_purchase*1000).toDateString()}</StyledTableCell>
         <StyledTableCell align="right">{row.customer_id}</StyledTableCell>
         <StyledTableCell align="right">{row.fuel}</StyledTableCell>
         <StyledTableCell align="right">{row.vehicel_segment && 'True' || 'False'}</StyledTableCell>
@@ -150,11 +152,11 @@ const CollapsibleTableRow = (props: { row: any }) => {
               <TableBody>
                 <TableRow style={{ borderBottom: 0 }}>
                   <StyledTableCell></StyledTableCell>
-                  <StyledTableCell align="right">{row.bodily_injury_liability && 'True' || 'False'}</StyledTableCell>
-                  <StyledTableCell align="right">{row.personal_injury_protection && 'True' || 'False'}</StyledTableCell>
-                  <StyledTableCell align="right">{row.property_damage_liability && 'True' || 'False'}</StyledTableCell>
-                  <StyledTableCell align="right">{row.collision && 'True' || 'False'}</StyledTableCell>
-                  <StyledTableCell align="right">{row.comprehensive && 'True' || 'False'}</StyledTableCell>
+                  <StyledTableCell align="right">bodily_injury_liability {row.bodily_injury_liability && <BeenhereIcon htmlColor="green" /> || <CancelIcon htmlColor="red"/>}</StyledTableCell>
+                  <StyledTableCell align="right">personal_injury_protection {row.personal_injury_protection && <BeenhereIcon htmlColor="green"/> || <CancelIcon htmlColor="red"/>}</StyledTableCell>
+                  <StyledTableCell align="right">property_damage_liability {row.property_damage_liability && <BeenhereIcon htmlColor="green"/> || <CancelIcon htmlColor="red"/>}</StyledTableCell>
+                  <StyledTableCell align="right">collision - {row.collision && <BeenhereIcon htmlColor="green"/> || <CancelIcon htmlColor="red"/>}</StyledTableCell>
+                  <StyledTableCell align="right">comprehensive {row.comprehensive && <BeenhereIcon htmlColor="green"/> || <CancelIcon htmlColor="red"/>}</StyledTableCell>
                 </TableRow>
               </TableBody>
             </Table>

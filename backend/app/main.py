@@ -18,6 +18,7 @@ from app import tasks
 origins = [
     "http://localhost",
     "http://localhost:3000",
+    '*'
 ]
 
 app = FastAPI(
@@ -74,12 +75,12 @@ app.include_router(
     # dependencies=[Depends(get_current_active_user)],
 )
 
-# app.include_router(
-#     analytics_router,
-#     prefix="/api/v1",
-#     tags=["analytics"],
-#     # dependencies=[Depends(get_current_active_user)],
-# )
+app.include_router(
+    analytics_router,
+    prefix="/api/v1",
+    tags=["analytics"],
+    # dependencies=[Depends(get_current_active_user)],
+)
 
 
 

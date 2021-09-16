@@ -85,11 +85,13 @@ def edit_policy(db:Session,policy_id:int,policy:schemas.PolicyEdit)->schemas.Pol
         raise HTTPException(status.HTTP_404_NOT_FOUND, detail="Policy not found")
     update_data = policy.dict(exclude_unset=True)
     print (update_data)
-    # for key, value in update_data.items():
     if  update_data["premium"]  < 1000000:
         setattr(db_policy, "premium", update_data["premium"])
     else:
         raise HTTPException(status.HTTP_422_UNPROCESSABLE_ENTITY, detail="Premium should be less than 1000")
+    
+    for key, value in update_data.items():
+        setattr(db_policy, key, update_data[key])
 
     db.add(db_policy)
     db.commit()

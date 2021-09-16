@@ -25,28 +25,30 @@ export const EditPolicy = () => {
     const { state, dispatch } = useStoreContext();
     const { selectedPolicyForEdit } = state;
     const history = useHistory();
-    const [formData, updateFormData] = useState<Policy>(selectedPolicyForEdit as Policy)
 
-    const updateValue = ({ value, type }: { value: string, type: string }) => {
-        if (type == "premium" && parseInt(value) > 1000000) { return alert('Error in Premium Value!') }
-        return updateFormData(prevState => ({ ...prevState, [type]: value } as Policy))
+    const updateValue = ({ value, type }: { value: string | boolean | number , type: string }) => {
+        if (type == "premium" && typeof (value) === "number" && value > 1000000) { return alert('Error in Premium Value!') }
+       return  dispatch({ type : 'update/selectedPolicy' , payload : { [type] : value } })
     }
 
     const updatePolicy = async () => {
         dispatch({ type : 'app/loader' , payload : true })
-        await updatePolicyInDb(formData);
+        await updatePolicyInDb(selectedPolicyForEdit as Policy );
         dispatch({ type : 'app/loader' , payload : false })
+        dispatch({ type : 'app/resetState' , payload : false })
+        dispatch({ type : "app/notification" , payload : "Policy Updated" })
         history.push('/')
     }
 
     const getDate = (d: number) => new Date(d * 1000).toDateString();
 
-    console.log(selectedPolicyForEdit)
+    const bool = (value: string) =>  { if(value==='true') return true; return false }
+
     return selectedPolicyForEdit ? (
         <Box m={2}>
             <Box display="flex" mb={3} width="100%" justifyContent="space-between">
                 <Breadcrumbs aria-label="breadcrumb">
-                    <Link color="inherit" href="/" onClick={() => history.push('/')}>
+                    <Link color="inherit" onClick={() => history.push('/')}>
                         Home
                     </Link>
                     <Typography color="textPrimary">edit policy</Typography>
@@ -57,30 +59,30 @@ export const EditPolicy = () => {
                 <TextField
                     variant="filled"
                     label="policy_id"
-                    value={formData.policy_id}
+                    value={selectedPolicyForEdit.policy_id}
                     disabled
                 />
                 <TextField
                     variant="filled"
                     label="date_of_purchase"
-                    value={getDate(formData.date_of_purchase)}
+                    value={getDate(selectedPolicyForEdit.date_of_purchase)}
                     disabled
                 />
                 <TextField
                     variant="filled"
                     label="premium"
                     type="number"
-                    error={formData.premium > 1000000}
-                    helperText={formData.premium > 1000000 && "Value should be less than million"}
+                    error={selectedPolicyForEdit.premium > 1000000}
+                    helperText={selectedPolicyForEdit.premium > 1000000 && "Value should be less than million"}
                     inputProps={{ min: 0, max: 1000000 }}
-                    value={formData.premium}
-                    onChange={e => updateValue({ value: e.target.value, type: 'premium' })}
+                    value={selectedPolicyForEdit.premium}
+                    onChange={e => updateValue({ value: parseInt(e.target.value), type: 'premium' })}
                 />
                 <TextField
                     id="standard-select-currency"
                     select
                     label="Select"
-                    value={formData.fuel}
+                    value={selectedPolicyForEdit.fuel}
                     onChange={e => updateValue({ value: e.target.value as string, type: 'fuel' })}
                     helperText="Please select your vehicle fuel type"
                     variant="filled"
@@ -93,7 +95,7 @@ export const EditPolicy = () => {
                     id="standard-select-currency"
                     select
                     label="Select"
-                    value={formData.vehicle_segment}
+                    value={selectedPolicyForEdit.vehicle_segment}
                     onChange={e => updateValue({ value: e.target.value as string, type: 'vehicle_segment' })}
                     helperText="Please select vehicle segment"
                     variant="filled"
@@ -104,40 +106,40 @@ export const EditPolicy = () => {
                 </TextField>
                 <FormControl component="fieldset">
                     <FormLabel component="legend">Any Bodily Injury Liability?</FormLabel>
-                    <RadioGroup row aria-label="injury" name="injury" value={formData.bodily_injury_liability}
-                        onChange={e => updateValue({ value: e.target.value as string, type: 'bodily_injury_liability' })} >
+                    <RadioGroup row aria-label="injury" name="injury" value={selectedPolicyForEdit.bodily_injury_liability}
+                        onChange={e => updateValue({ value: bool(e.target.value) as boolean, type: 'bodily_injury_liability' })} >
                         <FormControlLabel value={true} control={<Radio />} label="Yes" />
                         <FormControlLabel value={false} control={<Radio />} label="No" />
                     </RadioGroup>
                 </FormControl>
                 <FormControl component="fieldset">
                     <FormLabel component="legend">Any Collision?</FormLabel>
-                    <RadioGroup row aria-label="collision" name="collision" value={formData.collision}
-                        onChange={e => updateValue({ value: e.target.value as string, type: 'collision' })} >
+                    <RadioGroup row aria-label="collision" name="collision" value={selectedPolicyForEdit.collision}
+                        onChange={e => updateValue({ value: bool(e.target.value) as boolean, type: 'collision' })} >
                         <FormControlLabel value={true} control={<Radio />} label="Yes" />
                         <FormControlLabel value={false} control={<Radio />} label="No" />
                     </RadioGroup>
                 </FormControl>
                 <FormControl component="fieldset">
                     <FormLabel component="legend">Any comprehensive?</FormLabel>
-                    <RadioGroup row aria-label="comprehensive" name="comprehensive" value={formData.comprehensive}
-                        onChange={e => updateValue({ value: e.target.value as string, type: 'comprehensive' })} >
+                    <RadioGroup row aria-label="comprehensive" name="comprehensive" value={selectedPolicyForEdit.comprehensive}
+                        onChange={e => updateValue({ value: bool(e.target.value) as boolean, type: 'comprehensive' })} >
                         <FormControlLabel value={true} control={<Radio />} label="Yes" />
                         <FormControlLabel value={false} control={<Radio />} label="No" />
                     </RadioGroup>
                 </FormControl>
                 <FormControl component="fieldset">
                     <FormLabel component="legend">Any personal_injury_protection?</FormLabel>
-                    <RadioGroup row aria-label="personal_injury_protection" name="personal_injury_protection" value={formData.personal_injury_protection}
-                        onChange={e => updateValue({ value: e.target.value as string, type: 'personal_injury_protection' })} >
+                    <RadioGroup row aria-label="personal_injury_protection" name="personal_injury_protection" value={selectedPolicyForEdit.personal_injury_protection}
+                        onChange={e => updateValue({ value: bool(e.target.value) as boolean, type: 'personal_injury_protection' })} >
                         <FormControlLabel value={true} control={<Radio />} label="Yes" />
                         <FormControlLabel value={false} control={<Radio />} label="No" />
                     </RadioGroup>
                 </FormControl>
                 <FormControl component="fieldset">
                     <FormLabel component="legend">Any property_damage_liability?</FormLabel>
-                    <RadioGroup row aria-label="property_damage_liability" name="property_damage_liability" value={formData.property_damage_liability}
-                        onChange={e => updateValue({ value: e.target.value as string, type: 'property_damage_liability' })} >
+                    <RadioGroup row aria-label="property_damage_liability" name="property_damage_liability" value={selectedPolicyForEdit.property_damage_liability}
+                        onChange={e => updateValue({ value: bool(e.target.value) as boolean, type: 'property_damage_liability' })} >
                         <FormControlLabel value={true} control={<Radio />} label="Yes" />
                         <FormControlLabel value={false} control={<Radio />} label="No" />
                     </RadioGroup>

@@ -66,8 +66,11 @@ class Policy(PolicyBase):
 class PolicyOut(PolicyBase):
     pass
 
-class PolicyEdit(BaseModel):
-    premium: int
+# class PolicyEdit(BaseModel):
+#     premium: int
+
+class PolicyEdit(PolicyBase):
+    # premium: int
 
     class Config:
         orm_mode = True
