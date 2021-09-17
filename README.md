@@ -20,7 +20,7 @@ The only dependencies for this project should be docker and docker-compose.
 CSV Data import to Database has to be done manually for now. On Starting the Docker Containers, Connect to Docker Psql DB using pgAdmin Tool. Import the Csv Files present in Backend Folder to admin database as customers and policies tables.
 
 ### App ScreenShots
-Application Screenshots can be fund at this link. [relative link](./frontend/src/docs/app_screenshots.pdf)
+Application Screenshots can be fund at this link. [app_screenshots](./frontend/src/docs/app_screenshots.pdf)
 
 ### App Demo
 Application Demo can be fund at this link. [app_demo](./frontend/src/docs/app_demo.mp4)
