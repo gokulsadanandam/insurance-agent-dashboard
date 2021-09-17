@@ -50,9 +50,9 @@ export const Routes: FC = () => {
                 return null;
               }}
             />
-            <PrivateRoute  path="/" component={Home} />
-            <PrivateRoute  path="/policy/edit" component={EditPolicy} />
-            <PrivateRoute  path="/analytics" component={Analytics} />
+            <Route  path="/policy/edit" component={EditPolicy} />
+            <Route  path="/analytics" component={Analytics} />
+            <Route  path="/" component={Home} />
       </Switch>
     </Box>
   );

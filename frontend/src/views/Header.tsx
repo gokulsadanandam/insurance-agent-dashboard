@@ -41,6 +41,7 @@ export const Header: FC = () => {
           <Typography variant="h6" className={classes.title}>
             {state.header.text}
           </Typography>
+          {isAuthenticated() && <Button color="inherit" onClick={ () => history.push('/analytics') } >Analytics</Button>}
           {isAuthenticated() && <Button color="inherit">Logout</Button>}
         </Toolbar>
       </AppBar>
